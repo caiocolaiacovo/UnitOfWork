@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "UnitOfWork": {
+    "UnitOfWorkProject": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",
