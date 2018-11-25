@@ -1,3 +1,4 @@
+using System;
 using UnitOfWorkProject.Enums;
 
 namespace UnitOfWorkProject.Models
@@ -15,6 +16,7 @@ namespace UnitOfWorkProject.Models
             Description = description;
             Price = price;
             Category = category;
+            CreatedAt = DateTime.Now;
         }
     }
 }
