@@ -17,5 +17,17 @@ namespace UnitOfWorkProject.Services
         {
             return productRepository.GetAll();
         }
+
+        public void Add(Product entity)
+        {
+            var product = productRepository.GetById(entity.Id);
+
+            if (product == null) 
+            {
+                product = new Product(entity.Name, entity.Description, entity.Price, entity.Category);
+            }
+
+            productRepository.Add(entity);
+        }
     }
 }

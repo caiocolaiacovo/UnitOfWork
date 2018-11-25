@@ -31,13 +31,14 @@ namespace UnitOfWorkProject.Controllers
         [HttpGet("{id}")]
         public ActionResult<Product> Get(int id)
         {
-            // return productRepository.GetById(id);
-            return new JsonResult(new {});
+            var product = productService.GetAll().Where(p => p.Id.Equals(id));
+            return new JsonResult(product);
         }
 
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Product product)
         {
+            productService.Add(product);
         }
 
         [HttpPut("{id}")]
